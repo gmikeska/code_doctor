@@ -1,0 +1,47 @@
+<div class="container">
+
+<% if(!!@old_status) %>
+  <span class="">
+  The status of <%= @ticket_link %> has been changed from:
+  </span>
+  <table class="">
+    <tr>
+      <td class="text-white"><%= @old_status %></td>
+      <td>to</td>
+      <td class="text-white"><%= @status %></td>
+    </tr>
+  </table>
+<% else %>
+  <span class="">
+  The status of <%= @ticket_link %> has been changed to
+  </span>
+  <%= @status %>.
+<% end %>
+<hr>
+<a class="btn btn-primary" href='<%= @ticket_url %>'>View Ticket</a>
+</div>
+<style media="screen">
+  .container
+  {
+    margin-top:10px;
+  }
+  .logo
+  {
+    width:70%;
+  }
+  .site-title
+  {
+    margin-top:40px;
+  }
+  .site-text-logo
+  {
+    text-decoration:none;
+    color:black;
+  }
+  .badge
+  {
+    margin-left:8px;
+    margin-right:8px;
+    margin-bottom:8px;
+  }
+</style>
